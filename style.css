@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-font: "Space Grotesk", sans-serif;
+    --heading-font: "Syne", sans-serif;
+    --bg-black: #0a0a0a;
+    --header-black: #121212;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a5;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-black);
+    color: var(--text-white);
+}
+
+.header {
+    background-color: var(--header-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: var(--text-white);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+.link:hover {
+    color: var(--text-white);
+}
+
+.btn {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--text-white);
+    color: var(--bg-black);
+    border: 1px solid var(--text-white);
+    border-radius: 0px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: transparent;
+    color: var(--text-white);
+} 
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.hero {
+    min-height: calc(100vh - 81px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 80px;
+    background-color: var(--bg-black);
+    background-image: radial-gradient(circle at 80% 50%, #161616 0%, var(--bg-black) 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .content {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--text-white);
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-gray);
+    max-width: 600px;
+}
+
+.hero .btn {
+    align-self: flex-start;
+    padding: 16px 40px;
+    font-size: 15px;
+}
+
+.about {
+    padding: 120px 80px;
+    background-color: var(--bg-black);
+    border-bottom: 1px solid #222;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-title {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--text-white);
+    position: relative;
+    padding-top: 20px;
+}
+
+.about-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--text-white);
+}
+
+.about-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+.price-list {
+    padding: 120px 80px;
+    background-color: var(--bg-black);
+    border-bottom: 1px solid #222;
+}
+
+.price-title {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--text-white);
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border: 1px solid #222;
+    padding: 24px;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--text-white);
+}
+
+.card .img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.card:hover .img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.card-title {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-white);
+    margin-bottom: 12px;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.card-price {
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+    border-top: 1px dashed #333;
+    padding-top: 16px;
+    margin-top: auto;
+}
+
+.barbers {
+    padding: 120px 80px;
+    background-color: #121212;
+    border-bottom: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.barbers-title {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--text-white);
+    margin-bottom: 60px;
+    align-self: flex-start;
+}
+
+.barbers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.barber-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-black);
+    padding: 16px;
+    border: 1px solid #222;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.barber-card:hover {
+    border-color: var(--text-white);
+}
+
+.barber-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    filter: grayscale(100%) contrast(110%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.barber-card:hover .barber-img {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.02);
+}
+
+.barber-name {
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-white);
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+}
+
+.barber-about {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.barber-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.barber-card:hover .barber-name,
+.barber-card:hover .barber-about,
+.barber-card:hover .barber-description {
+    transform: translateX(5px);
+}
+
+.barbers .btn {
+    padding: 16px 50px;
+    font-size: 15px;
+}
+
+.footer {
+    background-color: var(--bg-black);
+    padding: 40px 80px 40px 80px;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.copy {
+    font-size: 13px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.address {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.hours {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.social-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--text-white);
+    transform: translateX(-3px);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .hero {
+        padding: 80px 40px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .about {
+        padding: 80px 40px;
+        gap: 40px;
+    }
+
+    .price-list, 
+    .barbers {
+        padding: 80px 40px;
+    }
+
+    .price-grid {
+        gap: 24px;
+    }
+
+    .barbers-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .barbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-title {
+        font-size: 38px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .action {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 40px 40px 40px;
+    }
+
+    .socials {
+        align-items: flex-start;
+    }
+    
+    .social-link:hover {
+        transform: translateX(3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-subtitle {
+        font-size: 15px;
+    }
+
+    .price-list, 
+    .barbers {
+        padding: 60px 20px;
+    }
+
+    .price-title, 
+    .barbers-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .price-grid, 
+    .barbers-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .card, 
+    .barber-card {
+        padding: 16px;
+    }
+
+    .barber-img {
+        height: 320px;
+    }
+
+    .footer {
+        padding: 60px 20px 40px 20px;
+    }
+}
