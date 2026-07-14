@@ -1,7 +1,7 @@
 # ✂️ Monochrome Cuts — Barber & Style
 
 > 🚀 **Project #8** in my frontend development journey.  
-> 🔗 **Live Demo:** [View Live Site]()
+> 🔗 **Live Demo:** [View Live Site](https://vastent.github.io/monochrome-cuts-barbershop/)
 
 Premium, minimalist, and brutalist single-page website for a high-end barbershop. Designed with a deep focus on typography, contrast, and buttery-smooth user interactions.
 
